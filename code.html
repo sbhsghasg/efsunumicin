@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gelişmiş Animasyonlu Kalp Emojisi İçinde E</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #ffe6f0, #ffb3cc);
+    font-family: 'Poppins', sans-serif;
+  }
+  .heart-container {
+    position: relative;
+    font-size: 10rem;
+    cursor: default;
+    user-select: none;
+    filter: drop-shadow(0 0 6px #ff4d7a);
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  .heart-container::before {
+    content: '❤️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 8px #ff2c57);
+    animation: flicker 3s infinite;
+  }
+  .letter-e {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 6rem;
+    font-weight: 900;
+    color: white;
+    text-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.35),
+      0 0 10px #fff,
+      0 0 20px #ff4d7a,
+      0 0 30px #ff2973;
+    pointer-events: none;
+    animation: glow 2.5s infinite alternate;
+    user-select: none;
+  }
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 6px #ff4d7a);
+    }
+    50% {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 20px #ff2973);
+    }
+  }
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.85;
+    }
+  }
+  @keyframes glow {
+    0% {
+      text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.35),
+        0 0 10px #fff,
+        0 0 20px #ff4d7a,
+        0 0 30px #ff2973;
+      color: #fff;
+    }
+    100% {
+      text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.5),
+        0 0 15px #ff6699,
+        0 0 30px #ff2d65,
+        0 0 40px #ff1a52;
+      color: #ffe6f0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="heart-container" role="img" aria-label="Animasyonlu kalp emojisi içinde E harfi">
+    <div class="letter-e">E</div>
+  </div>
+</body>
+</html>
